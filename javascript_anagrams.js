@@ -1,7 +1,10 @@
-function anagram_checker()
+function anagram_checker(st1, st2)
 {
-    var array = ['listen','silent','earth', 'heart'];		//input array
-    var output =[];											//output array
+	
+    var array = [];
+	array[0]=st1;
+	array[1]=st2;										//input array
+    var output =[];										//output array
 	for (var i=0; i<array.length; i++)
 	{
 		st=array[i];
@@ -38,10 +41,11 @@ function anagram_checker()
         }
         else
         {
-            console.log('They are not anagrams');
+            console.log(array[n]+' and '+array[n+1]+' are not anagrams');
         }
                 
     }
 }
 
-anagram_checker();
+anagram_checker('cellar', 'recall');
+anagram_checker('arm', 'elbow');
